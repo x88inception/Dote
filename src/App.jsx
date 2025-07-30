@@ -11,6 +11,7 @@ export default function App() {
   }, []);
   return (
     <>
+      <h1>Posts Are Ready to read </h1>
       <div style={{ width:"700px" ,marginLeft:"300px"}}>
         {posts.slice(0, 10).map((post) => {
           return (
