@@ -11,7 +11,7 @@ export default function App() {
   }, []);
   return (
     <>
-      <h1>Posts</h1>
+      <h1>Top 10 Posts </h1>
       <div style={{ width:"700px" ,marginLeft:"300px"}}>
         {posts.slice(0, 10).map((post) => {
           return (
