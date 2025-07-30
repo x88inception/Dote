@@ -1,36 +1,22 @@
-import { useState, useEffect } from "react";
-import "./App.css";
-import axios from "axios";
+import { Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Posts from './pages/Posts';
+import PostDetails from './pages/PostDetails';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
-export default function App() {
-  const [posts, setPosts] = useState([]);
-  useEffect(() => {
-    axios
-      .get("https://jsonplaceholder.typicode.com/posts")
-      .then((res) => setPosts(res.data));
-  }, []);
+function App() {
   return (
     <>
-      <h1>Top 10 Posts </h1>
-      <div style={{ width:"700px" ,marginLeft:"300px"}}>
-        {posts.slice(0, 10).map((post) => {
-          return (
-            <div
-              key={post.id}
-              style={{
-                color: "black",
-                border: "2px solid blue",
-                margin: "10px",
-                padding: "10px",
-                backgroundColor: "white",
-              }}
-            >
-              <h3>{post.title}</h3>
-              <p>{post.body}</p>
-            </div>
-          );
-        })}
-      </div>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/posts" element={<Posts />} />
+        <Route path="/posts/:id" element={<PostDetails />} />
+      </Routes>
+      <Footer />
     </>
   );
 }
+
+export default App;
