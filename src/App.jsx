@@ -9,6 +9,7 @@ function App() {
   return (
     <>
       <Navbar />
+      <h1>hello world</h1>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/posts" element={<Posts />} />
