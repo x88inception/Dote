@@ -38,17 +38,7 @@
 .hero-text{
     font-size: 30px;
 }
-.hero a{
-    border-radius: 10px;
-    font-size: 30px;
-    background-color:#191970;
-    color: white;
-    padding: 10px;
-    text-decoration: none;
-}
-.hero a:hover{
-    background-color: #4169e1;
-}
+
 /* //////////////////////////////////////////////////////// */
 
 .card{
@@ -86,4 +76,26 @@ footer ul{
     list-style: none;
     display: flex;
     gap: 30px;
+}
+/* ///////////////////////////////////////////// */
+.search-container{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.posts-container {
+  margin: 6%;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(300px, 1fr)); /* أعمدة مرنة */
+  gap: 24px;
+}
+.link {
+  text-decoration: none;
+}
+.post-card-details{
+    border: 5px solid;
+    border-radius: 5px;
+    padding: 20px;
+    width: 50%;
+    margin-left: 20px;
 }

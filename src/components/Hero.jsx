@@ -1,5 +1,5 @@
 import './compStyles.css'
-
+import Button from '@mui/material/Button';
 
 
 export default function Hero(){
@@ -9,7 +9,9 @@ export default function Hero(){
                 <h1>Welcome To Tech Hub</h1>
                 <h3>Best Learning Platform Ever</h3>
             </div>
-            <a href="">Join Tech Hub</a>
+            <Button onClick={()=>{
+                alert("clicked")
+            }} variant="contained" color="primary" size='large'>Join Tech Hub</Button>
         </div>
     )
 }
